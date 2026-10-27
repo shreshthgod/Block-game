@@ -1,0 +1,29 @@
+{
+  "browser": "151.0.7922.34",
+  "samples": 72,
+  "medianMs": 4.699999988079071,
+  "p95Ms": 16.399999976158142,
+  "maxMs": 25.599999964237213,
+  "boardStats": [
+    {
+      "fixture": "empty",
+      "medianMs": 14.600000023841858,
+      "p95Ms": 18.200000047683716,
+      "maxMs": 25.599999964237213
+    },
+    {
+      "fixture": "isolated spaces",
+      "medianMs": 4,
+      "p95Ms": 5.199999988079071,
+      "maxMs": 5.399999976158142
+    },
+    {
+      "fixture": "diagonal gaps",
+      "medianMs": 4.600000023841858,
+      "p95Ms": 5.599999964237213,
+      "maxMs": 5.900000035762787
+    }
+  ],
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.7922.34 Safari/537.36",
+  "note": "Headless desktop Chromium, unthrottled. Each synchronous generation measured directly; no FPS or real-device latency claim."
+}

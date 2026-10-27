@@ -1,0 +1,210 @@
+{
+  "generatorVersion": 2,
+  "seeds": [
+    1,
+    42,
+    143,
+    853,
+    2026,
+    32768,
+    65535,
+    4294967295
+  ],
+  "moveCap": 120,
+  "emptyBoardMobility": 1117,
+  "policy": "Max immediate lines; then largest piece; ties use slot, row, column order. No lookahead.",
+  "modes": {
+    "classic": {
+      "runs": [
+        {
+          "seed": 1,
+          "moves": 38,
+          "lines": 13,
+          "capped": false
+        },
+        {
+          "seed": 42,
+          "moves": 31,
+          "lines": 12,
+          "capped": false
+        },
+        {
+          "seed": 143,
+          "moves": 35,
+          "lines": 13,
+          "capped": false
+        },
+        {
+          "seed": 853,
+          "moves": 64,
+          "lines": 27,
+          "capped": false
+        },
+        {
+          "seed": 2026,
+          "moves": 35,
+          "lines": 12,
+          "capped": false
+        },
+        {
+          "seed": 32768,
+          "moves": 44,
+          "lines": 17,
+          "capped": false
+        },
+        {
+          "seed": 65535,
+          "moves": 29,
+          "lines": 12,
+          "capped": false
+        },
+        {
+          "seed": 4294967295,
+          "moves": 47,
+          "lines": 16,
+          "capped": false
+        }
+      ],
+      "initialFitViolations": 8,
+      "generationCount": 111,
+      "verifiedCompleteTrayFraction": null,
+      "searchBudgetExhaustionFraction": 0,
+      "distinctShapes": 25,
+      "averageMoves": 40.375,
+      "totalLines": 122,
+      "refills": 103,
+      "unusableRefillFraction": 0,
+      "clearOpportunityRefillFraction": 0.5728155339805825,
+      "consecutiveRepetitionRate": 0.024615384615384615,
+      "shapeFrequency": {
+        "Single": 17,
+        "2-cell horizontal bar": 16,
+        "3-cell horizontal bar": 15,
+        "4-cell horizontal bar": 16,
+        "5-cell horizontal bar": 13,
+        "2-cell vertical bar": 14,
+        "3-cell vertical bar": 11,
+        "4-cell vertical bar": 9,
+        "5-cell vertical bar": 12,
+        "Small square": 11,
+        "Large square": 16,
+        "Wide rectangle": 13,
+        "Tall rectangle": 14,
+        "Small L, orientation 1": 10,
+        "Small L, orientation 2": 9,
+        "Small L, orientation 3": 12,
+        "Small L, orientation 4": 9,
+        "T, orientation 1": 6,
+        "T, orientation 2": 20,
+        "T, orientation 3": 14,
+        "T, orientation 4": 13,
+        "Long L, orientation 1": 11,
+        "Long L, orientation 2": 20,
+        "Long L, orientation 3": 17,
+        "Long L, orientation 4": 15
+      },
+      "generationMs": {
+        "samples": 111,
+        "median": 0.004232999999999265,
+        "p95": 0.030168000000003303,
+        "max": 0.289469000000004
+      }
+    },
+    "flow": {
+      "runs": [
+        {
+          "seed": 1,
+          "moves": 120,
+          "lines": 53,
+          "capped": true
+        },
+        {
+          "seed": 42,
+          "moves": 120,
+          "lines": 56,
+          "capped": true
+        },
+        {
+          "seed": 143,
+          "moves": 65,
+          "lines": 27,
+          "capped": false
+        },
+        {
+          "seed": 853,
+          "moves": 119,
+          "lines": 54,
+          "capped": false
+        },
+        {
+          "seed": 2026,
+          "moves": 120,
+          "lines": 50,
+          "capped": true
+        },
+        {
+          "seed": 32768,
+          "moves": 120,
+          "lines": 54,
+          "capped": true
+        },
+        {
+          "seed": 65535,
+          "moves": 120,
+          "lines": 51,
+          "capped": true
+        },
+        {
+          "seed": 4294967295,
+          "moves": 120,
+          "lines": 55,
+          "capped": true
+        }
+      ],
+      "initialFitViolations": 0,
+      "generationCount": 308,
+      "verifiedCompleteTrayFraction": 1,
+      "searchBudgetExhaustionFraction": 0,
+      "distinctShapes": 25,
+      "averageMoves": 113,
+      "totalLines": 400,
+      "refills": 300,
+      "unusableRefillFraction": 0,
+      "clearOpportunityRefillFraction": 0.7,
+      "consecutiveRepetitionRate": 0.036026200873362446,
+      "shapeFrequency": {
+        "Single": 43,
+        "2-cell horizontal bar": 45,
+        "3-cell horizontal bar": 32,
+        "4-cell horizontal bar": 49,
+        "5-cell horizontal bar": 42,
+        "2-cell vertical bar": 55,
+        "3-cell vertical bar": 43,
+        "4-cell vertical bar": 50,
+        "5-cell vertical bar": 46,
+        "Small square": 29,
+        "Large square": 18,
+        "Wide rectangle": 33,
+        "Tall rectangle": 26,
+        "Small L, orientation 1": 30,
+        "Small L, orientation 2": 30,
+        "Small L, orientation 3": 39,
+        "Small L, orientation 4": 32,
+        "T, orientation 1": 28,
+        "T, orientation 2": 33,
+        "T, orientation 3": 32,
+        "T, orientation 4": 27,
+        "Long L, orientation 1": 44,
+        "Long L, orientation 2": 37,
+        "Long L, orientation 3": 41,
+        "Long L, orientation 4": 40
+      },
+      "generationMs": {
+        "samples": 308,
+        "median": 7.133306000000175,
+        "p95": 12.466047999999773,
+        "max": 33.695525
+      }
+    }
+  }
+}

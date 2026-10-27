@@ -1,0 +1,16 @@
+import { useGameCommands, useGameState } from '../context/GameProvider.jsx';
+import { Brand, Icon } from '../components/Icon.jsx';
+import { THEMES } from '../themes.js';
+export function HomeScreen() {
+  const { profile, game, legacyGame } = useGameState(), c = useGameCommands();
+  const active = game && game.status !== 'gameOver';
+  const theme = THEMES.find(t => t.id === profile.theme);
+  return <section className="home-screen joy-home"><header className="home-top"><Brand /><span className="mode-tag">8 × 8 · UNTIMED</span></header><div className="home-copy"><div className="home-prism" aria-hidden="true">✦<span>✿</span><i>◆</i></div><span className="eyebrow">A LITTLE SPACE. BRIGHT POSSIBILITIES.</span><h1>Make room.<br /><span>Make a burst.</span></h1><p>Big pieces. Happy discoveries.<br />One colourful move at a time.</p></div>
+    <div className="home-actions">{active && <button className="button primary" aria-label="Continue game" onClick={c.continueGame}>Continue <small>{game.mode === 'joy' ? 'Joy' : game.mode === 'flow' ? 'Flow · saved game' : 'Classic'}</small><Icon name="arrow" /></button>}<button className={`button ${active ? 'secondary' : 'primary'}`} aria-label="New Game" onClick={c.newGame}>Play {profile.selectedMode === 'classic' ? 'Classic' : 'Joy'}<Icon name="arrow" /></button></div>
+    <fieldset className="mode-picker"><legend>Your kind of puzzle</legend><div className="segmented">{[['joy', 'Joy'], ['classic', 'Classic']].map(([mode, label]) => <label key={mode}><input type="radio" name="mode" checked={profile.selectedMode === mode} onChange={() => c.dispatch({ type: 'SET_MODE', mode })} /><span>{label}</span></label>)}</div><p>{profile.selectedMode === 'classic' ? 'Independent random pieces. The game ends when no remaining piece fits.' : 'Clear 12 lines to win a round. Helpful pieces, room for big ideas, and free New Pieces whenever you get stuck.'}</p></fieldset>
+    <button className="appearance-entry" onClick={() => c.openModal('settings')}><span className="theme-swatches" aria-hidden="true">{theme.palette.slice(0, 4).map(colour => <i key={colour} style={{ background: colour }} />)}</span><span>{theme.name}<small>Appearance & sound</small></span><Icon name="arrow" /></button>
+    <div className="home-progress"><span><strong>{profile.stats.roundsWon}</strong>Rounds won</span><span><strong>{profile.stats.linesCleared}</strong>Lines cleared</span><button onClick={() => c.openModal('collection')}>My collection <Icon name="arrow" size={15} /></button></div><p className="last-score">{profile.selectedMode === 'classic' ? 'Classic' : 'Joy'} best · {profile.bestScores[profile.selectedMode].toLocaleString()}</p>
+    {legacyGame && <p className="migration-notice" role="status">The playable board is 8 × 8. Your older, incompatible board is kept separately. Confirm a new game before replacing that progress.</p>}
+    {profile.legacyBestScore > 0 && <p className="last-score">Legacy board best · {profile.legacyBestScore.toLocaleString()}</p>}
+    <div className="home-secondary one-action"><button className="button quiet" onClick={() => c.openModal('help')}><Icon name="help" /> How to play</button></div><footer className="home-footer">Eight by eight. A little joy in every round.</footer></section>;
+}

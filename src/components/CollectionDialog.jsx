@@ -1,0 +1,7 @@
+import { useGameState, useGameCommands } from '../context/GameProvider.jsx';
+import { MILESTONES } from '../game/progress.js';
+export function CollectionDialog() {
+  const { profile } = useGameState(), c = useGameCommands();
+  const stats = profile.stats;
+  return <><span className="eyebrow">YOUR COLOUR COLLECTION</span><h2 id="dialog-title">Little wins, kept forever.</h2><p id="dialog-description">Stored in this browser. No daily streaks or deadlines.</p><div className="round-stats">{[['Rounds won', stats.roundsWon], ['Total lines', stats.linesCleared], ['Largest burst', stats.largestBurst], ['All Clears', stats.allClears], ['Largest piece', stats.largestPiece], ['New Pieces used', stats.recoveries], ['Joy best', profile.bestScores.joy], ['Classic best', profile.bestScores.classic], ...(profile.bestScores.flow > 0 ? [['Legacy Flow best', profile.bestScores.flow]] : [])].map(([label, value]) => <span key={label}>{label}<strong>{value.toLocaleString()}</strong></span>)}</div><div className="milestone-grid">{MILESTONES.map(m => <div className={`milestone ${stats[m.key] >= m.target ? 'earned' : ''}`} key={m.id}><b aria-hidden="true">{m.icon}</b><div><strong>{m.name}</strong><span>{m.description} · {stats[m.key] >= m.target ? 'Collected' : `${Math.min(stats[m.key], m.target)} / ${m.target}`}</span></div></div>)}</div><button className="button primary" onClick={c.closeModal}>Done</button></>;
+}

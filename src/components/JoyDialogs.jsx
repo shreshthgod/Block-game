@@ -1,0 +1,10 @@
+import { useGameCommands, useGameState } from '../context/GameProvider.jsx';
+export function RecoveryDialog() {
+  const { game } = useGameState(), c = useGameCommands();
+  const noEmptyCells = !game.board.flat().some(c => c === null);
+  return <><span className="eyebrow">A LITTLE HELP, MORE POSSIBILITIES</span><h2 id="dialog-title">Let’s make some room.</h2><p id="dialog-description">Get new pieces and keep going. Your board, score and used slots stay just as they are.</p><div className="dialog-actions"><button className="button primary" disabled={noEmptyCells} onClick={() => c.recover({ gameId: game.gameId, revision: game.revision })}>New Pieces</button><button className="button secondary" onClick={() => c.openModal('restart')}>New Round</button><button className="button quiet" onClick={c.home}>Home</button></div><p className="assistance-note">{noEmptyCells ? 'No catalogue piece can fit this board. Start a new round to continue.' : 'Free, unlimited assistance · no score deduction'}</p></>;
+}
+export function RoundWinDialog() {
+  const { game } = useGameState(), c = useGameCommands();
+  return <><div className="win-emblem" aria-hidden="true">✦</div><span className="eyebrow">YOU DID IT!</span><h2 id="dialog-title">A round full of colour.</h2><p id="dialog-description">You cleared {game.statistics.linesCleared - game.round.baselineLines} lines this round. Keep your canvas, or start a fresh one.</p><div className="round-stats"><span>Score<strong>{game.score.toLocaleString()}</strong></span><span>Total lines<strong>{game.statistics.linesCleared}</strong></span><span>Largest burst<strong>{game.statistics.largestBurst}</strong></span><span>All Clears<strong>{game.statistics.allClears}</strong></span></div><div className="dialog-actions"><button className="button primary" onClick={() => c.continueRound({ gameId: game.gameId, revision: game.revision, roundId: game.round.id })}>Continue Playing</button><button className="button secondary" onClick={c.newGame}>New Round</button><button className="button quiet" onClick={c.home}>Home</button></div></>;
+}

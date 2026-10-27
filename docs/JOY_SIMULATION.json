@@ -1,0 +1,472 @@
+{
+  "seeds": [
+    1,
+    42,
+    143,
+    853
+  ],
+  "moveCap": 96,
+  "joyEmptyMobility": 1237,
+  "policies": {
+    "greedy": "Max immediate lines, then largest piece, then slot/row/column order; no lookahead.",
+    "firstLegal": "First remaining slot with a legal move, first row-major anchor; deliberately imperfect."
+  },
+  "results": {
+    "classic/greedy": {
+      "runs": [
+        {
+          "seed": 1,
+          "moves": 38,
+          "capped": false,
+          "roundsWon": 0,
+          "linesCleared": 13,
+          "largestBurst": 2,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 0
+        },
+        {
+          "seed": 42,
+          "moves": 31,
+          "capped": false,
+          "roundsWon": 0,
+          "linesCleared": 12,
+          "largestBurst": 2,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 0
+        },
+        {
+          "seed": 143,
+          "moves": 35,
+          "capped": false,
+          "roundsWon": 0,
+          "linesCleared": 13,
+          "largestBurst": 1,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 0
+        },
+        {
+          "seed": 853,
+          "moves": 64,
+          "capped": false,
+          "roundsWon": 0,
+          "linesCleared": 27,
+          "largestBurst": 2,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 0
+        }
+      ],
+      "trays": 58,
+      "recoverySizeDistribution": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "recoveryGenerationMs": {
+        "samples": 0,
+        "median": null,
+        "p95": null,
+        "max": null
+      },
+      "legalFirstMoveViolations": 0,
+      "verifiedTrayFraction": null,
+      "largeTrayFraction": 0.3620689655172414,
+      "allSmallTrayFraction": 0.06896551724137931,
+      "initialLargeAvailable": 58,
+      "largeWhenInitiallyAvailableFraction": 0.3620689655172414,
+      "immediateClearFraction": 0.5344827586206896,
+      "reachableClearFraction": null,
+      "piecesNeedingSetup": 4,
+      "searchBudgetExhaustions": 0,
+      "searchCandidates": 0,
+      "adjacentRepetitionFraction": 0.029411764705882353,
+      "sizeDistribution": {
+        "small": 61,
+        "medium": 90,
+        "large": 23
+      },
+      "shapeFrequency": {
+        "Single": 7,
+        "2-cell horizontal bar": 10,
+        "3-cell horizontal bar": 7,
+        "4-cell horizontal bar": 7,
+        "5-cell horizontal bar": 8,
+        "2-cell vertical bar": 8,
+        "3-cell vertical bar": 6,
+        "4-cell vertical bar": 6,
+        "5-cell vertical bar": 7,
+        "Small square": 5,
+        "Large square": 11,
+        "Wide rectangle": 3,
+        "Tall rectangle": 9,
+        "Small L, orientation 1": 7,
+        "Small L, orientation 2": 6,
+        "Small L, orientation 3": 7,
+        "Small L, orientation 4": 3,
+        "T, orientation 1": 3,
+        "T, orientation 2": 13,
+        "T, orientation 3": 8,
+        "T, orientation 4": 5,
+        "Long L, orientation 1": 6,
+        "Long L, orientation 2": 6,
+        "Long L, orientation 3": 9,
+        "Long L, orientation 4": 7,
+        "Six-cell L, orientation 1": 0,
+        "Six-cell L, orientation 2": 0,
+        "Six-cell L, orientation 3": 0,
+        "Six-cell L, orientation 4": 0
+      },
+      "generationMs": {
+        "samples": 58,
+        "median": 0.00342200000000048,
+        "p95": 0.02425699999999864,
+        "max": 0.2752030000000012
+      }
+    },
+    "joy/greedy": {
+      "runs": [
+        {
+          "seed": 1,
+          "moves": 96,
+          "capped": true,
+          "roundsWon": 4,
+          "linesCleared": 52,
+          "largestBurst": 3,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 3
+        },
+        {
+          "seed": 42,
+          "moves": 96,
+          "capped": true,
+          "roundsWon": 4,
+          "linesCleared": 49,
+          "largestBurst": 1,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 0
+        },
+        {
+          "seed": 143,
+          "moves": 96,
+          "capped": true,
+          "roundsWon": 4,
+          "linesCleared": 53,
+          "largestBurst": 2,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 1
+        },
+        {
+          "seed": 853,
+          "moves": 96,
+          "capped": true,
+          "roundsWon": 4,
+          "linesCleared": 54,
+          "largestBurst": 2,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 0
+        }
+      ],
+      "trays": 132,
+      "recoverySizeDistribution": {
+        "small": 1,
+        "medium": 0,
+        "large": 3
+      },
+      "recoveryGenerationMs": {
+        "samples": 4,
+        "median": 2.1604090000000156,
+        "p95": 6.327777000000026,
+        "max": 6.327777000000026
+      },
+      "legalFirstMoveViolations": 0,
+      "verifiedTrayFraction": 1,
+      "largeTrayFraction": 0.8560606060606061,
+      "allSmallTrayFraction": 0.007575757575757576,
+      "initialLargeAvailable": 127,
+      "largeWhenInitiallyAvailableFraction": 0.8661417322834646,
+      "immediateClearFraction": 0.7651515151515151,
+      "reachableClearFraction": 0.9545454545454546,
+      "piecesNeedingSetup": 10,
+      "searchBudgetExhaustions": 7,
+      "searchCandidates": 396,
+      "adjacentRepetitionFraction": 0.030612244897959183,
+      "sizeDistribution": {
+        "small": 66,
+        "medium": 193,
+        "large": 137
+      },
+      "shapeFrequency": {
+        "Single": 9,
+        "2-cell horizontal bar": 6,
+        "3-cell horizontal bar": 5,
+        "4-cell horizontal bar": 13,
+        "5-cell horizontal bar": 18,
+        "2-cell vertical bar": 11,
+        "3-cell vertical bar": 6,
+        "4-cell vertical bar": 12,
+        "5-cell vertical bar": 22,
+        "Small square": 9,
+        "Large square": 12,
+        "Wide rectangle": 18,
+        "Tall rectangle": 26,
+        "Small L, orientation 1": 11,
+        "Small L, orientation 2": 5,
+        "Small L, orientation 3": 8,
+        "Small L, orientation 4": 5,
+        "T, orientation 1": 10,
+        "T, orientation 2": 21,
+        "T, orientation 3": 12,
+        "T, orientation 4": 13,
+        "Long L, orientation 1": 16,
+        "Long L, orientation 2": 20,
+        "Long L, orientation 3": 10,
+        "Long L, orientation 4": 17,
+        "Six-cell L, orientation 1": 24,
+        "Six-cell L, orientation 2": 19,
+        "Six-cell L, orientation 3": 24,
+        "Six-cell L, orientation 4": 14
+      },
+      "generationMs": {
+        "samples": 132,
+        "median": 8.689926000000014,
+        "p95": 21.5337659999999,
+        "max": 31.924167999999995
+      }
+    },
+    "classic/firstLegal": {
+      "runs": [
+        {
+          "seed": 1,
+          "moves": 20,
+          "capped": false,
+          "roundsWon": 0,
+          "linesCleared": 4,
+          "largestBurst": 2,
+          "allClears": 0,
+          "largestPiece": 6,
+          "recoveries": 0
+        },
+        {
+          "seed": 42,
+          "moves": 17,
+          "capped": false,
+          "roundsWon": 0,
+          "linesCleared": 5,
+          "largestBurst": 2,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 0
+        },
+        {
+          "seed": 143,
+          "moves": 22,
+          "capped": false,
+          "roundsWon": 0,
+          "linesCleared": 5,
+          "largestBurst": 2,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 0
+        },
+        {
+          "seed": 853,
+          "moves": 20,
+          "capped": false,
+          "roundsWon": 0,
+          "linesCleared": 6,
+          "largestBurst": 2,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 0
+        }
+      ],
+      "trays": 28,
+      "recoverySizeDistribution": {
+        "small": 0,
+        "medium": 0,
+        "large": 0
+      },
+      "recoveryGenerationMs": {
+        "samples": 0,
+        "median": null,
+        "p95": null,
+        "max": null
+      },
+      "legalFirstMoveViolations": 0,
+      "verifiedTrayFraction": null,
+      "largeTrayFraction": 0.2857142857142857,
+      "allSmallTrayFraction": 0.07142857142857142,
+      "initialLargeAvailable": 27,
+      "largeWhenInitiallyAvailableFraction": 0.25925925925925924,
+      "immediateClearFraction": 0.5357142857142857,
+      "reachableClearFraction": null,
+      "piecesNeedingSetup": 5,
+      "searchBudgetExhaustions": 0,
+      "searchCandidates": 0,
+      "adjacentRepetitionFraction": 0.0375,
+      "sizeDistribution": {
+        "small": 26,
+        "medium": 50,
+        "large": 8
+      },
+      "shapeFrequency": {
+        "Single": 4,
+        "2-cell horizontal bar": 2,
+        "3-cell horizontal bar": 2,
+        "4-cell horizontal bar": 5,
+        "5-cell horizontal bar": 4,
+        "2-cell vertical bar": 6,
+        "3-cell vertical bar": 2,
+        "4-cell vertical bar": 5,
+        "5-cell vertical bar": 5,
+        "Small square": 3,
+        "Large square": 5,
+        "Wide rectangle": 1,
+        "Tall rectangle": 2,
+        "Small L, orientation 1": 4,
+        "Small L, orientation 2": 2,
+        "Small L, orientation 3": 3,
+        "Small L, orientation 4": 1,
+        "T, orientation 1": 2,
+        "T, orientation 2": 5,
+        "T, orientation 3": 4,
+        "T, orientation 4": 4,
+        "Long L, orientation 1": 4,
+        "Long L, orientation 2": 3,
+        "Long L, orientation 3": 4,
+        "Long L, orientation 4": 2,
+        "Six-cell L, orientation 1": 0,
+        "Six-cell L, orientation 2": 0,
+        "Six-cell L, orientation 3": 0,
+        "Six-cell L, orientation 4": 0
+      },
+      "generationMs": {
+        "samples": 28,
+        "median": 0.0018230000000585278,
+        "p95": 0.01981500000010783,
+        "max": 0.03488900000002104
+      }
+    },
+    "joy/firstLegal": {
+      "runs": [
+        {
+          "seed": 1,
+          "moves": 96,
+          "capped": true,
+          "roundsWon": 4,
+          "linesCleared": 48,
+          "largestBurst": 2,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 5
+        },
+        {
+          "seed": 42,
+          "moves": 96,
+          "capped": true,
+          "roundsWon": 4,
+          "linesCleared": 49,
+          "largestBurst": 3,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 7
+        },
+        {
+          "seed": 143,
+          "moves": 96,
+          "capped": true,
+          "roundsWon": 3,
+          "linesCleared": 47,
+          "largestBurst": 2,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 10
+        },
+        {
+          "seed": 853,
+          "moves": 96,
+          "capped": true,
+          "roundsWon": 3,
+          "linesCleared": 47,
+          "largestBurst": 3,
+          "allClears": 0,
+          "largestPiece": 9,
+          "recoveries": 9
+        }
+      ],
+      "trays": 132,
+      "recoverySizeDistribution": {
+        "small": 11,
+        "medium": 16,
+        "large": 13
+      },
+      "recoveryGenerationMs": {
+        "samples": 31,
+        "median": 2.2994300000000294,
+        "p95": 4.610169000000042,
+        "max": 5.110631999999896
+      },
+      "legalFirstMoveViolations": 0,
+      "verifiedTrayFraction": 1,
+      "largeTrayFraction": 0.8181818181818182,
+      "allSmallTrayFraction": 0,
+      "initialLargeAvailable": 103,
+      "largeWhenInitiallyAvailableFraction": 0.8349514563106796,
+      "immediateClearFraction": 0.8939393939393939,
+      "reachableClearFraction": 0.9772727272727273,
+      "piecesNeedingSetup": 69,
+      "searchBudgetExhaustions": 3,
+      "searchCandidates": 396,
+      "adjacentRepetitionFraction": 0.03571428571428571,
+      "sizeDistribution": {
+        "small": 89,
+        "medium": 184,
+        "large": 123
+      },
+      "shapeFrequency": {
+        "Single": 17,
+        "2-cell horizontal bar": 10,
+        "3-cell horizontal bar": 4,
+        "4-cell horizontal bar": 12,
+        "5-cell horizontal bar": 15,
+        "2-cell vertical bar": 14,
+        "3-cell vertical bar": 13,
+        "4-cell vertical bar": 13,
+        "5-cell vertical bar": 10,
+        "Small square": 17,
+        "Large square": 7,
+        "Wide rectangle": 23,
+        "Tall rectangle": 18,
+        "Small L, orientation 1": 7,
+        "Small L, orientation 2": 6,
+        "Small L, orientation 3": 8,
+        "Small L, orientation 4": 10,
+        "T, orientation 1": 14,
+        "T, orientation 2": 19,
+        "T, orientation 3": 16,
+        "T, orientation 4": 15,
+        "Long L, orientation 1": 16,
+        "Long L, orientation 2": 13,
+        "Long L, orientation 3": 11,
+        "Long L, orientation 4": 13,
+        "Six-cell L, orientation 1": 17,
+        "Six-cell L, orientation 2": 17,
+        "Six-cell L, orientation 3": 24,
+        "Six-cell L, orientation 4": 17
+      },
+      "generationMs": {
+        "samples": 132,
+        "median": 6.751852000000099,
+        "p95": 15.32021399999985,
+        "max": 27.68510699999979
+      }
+    }
+  }
+}
